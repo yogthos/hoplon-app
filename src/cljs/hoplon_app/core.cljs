@@ -13,8 +13,8 @@
   (h/div
       (h/h4 (or title "TODO"))
       (h/ul
-        (h/loop-tpl :bindings [todo todo-items]
-                    (h/li todo)))))
+        (h/for-tpl [todo todo-items]
+          (h/li todo)))))
 
 (h/defelem add-todo []
   (let [new-item (cell "")]
